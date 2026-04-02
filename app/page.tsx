@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { ContactLocations } from "@/components/contact-locations";
 import { HeroSection } from "@/components/hero-section";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -230,10 +231,19 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contact CTA */}
+        {/* Contact */}
         <section id="contact" className="scroll-mt-20 pb-14 sm:pb-20 md:pb-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-coco-husk via-coco-husk-deep to-coco-husk-deep px-5 py-12 text-center shadow-lg sm:rounded-3xl sm:px-8 sm:py-14 md:px-12">
+            <h2 className="font-serif text-2xl font-semibold tracking-tight text-coco-husk-deep sm:text-3xl md:text-4xl">
+              Contact us
+            </h2>
+            <p className="mt-4 max-w-2xl text-base text-coco-muted sm:text-lg">
+              Reach our team in Canada and the USA for quotes, specifications, and logistics. We also
+              serve Sri Lanka and global markets through our network.
+            </p>
+            <ContactLocations className="mt-10" />
+
+            <div className="relative mt-12 overflow-hidden rounded-2xl bg-gradient-to-br from-coco-husk via-coco-husk-deep to-coco-husk-deep px-5 py-12 text-center shadow-lg sm:rounded-3xl sm:px-8 sm:py-14 md:px-12">
               <div
                 className="pointer-events-none absolute inset-0 opacity-30"
                 style={{
@@ -243,9 +253,9 @@ export default function Home() {
                 aria-hidden
               />
               <div className="relative">
-                <h2 className="font-serif text-xl font-semibold text-white sm:text-2xl md:text-3xl">
+                <h3 className="font-serif text-xl font-semibold text-white sm:text-2xl md:text-3xl">
                   Ready to plan your next grow?
-                </h2>
+                </h3>
                 <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-coco-sand sm:text-base">
                   Tell us about your crop, volume, and timeline—we’ll help you pick the right cocopeat
                   format and grade, whether you&apos;re in {site.regions.join(", ")}.

@@ -37,7 +37,7 @@ export function SiteFooter() {
               </a>
             </div>
           </div>
-          <div className="flex flex-wrap gap-10 text-sm">
+          <div className="flex flex-wrap gap-10 text-sm lg:gap-12">
             <div>
               <p className="font-semibold text-foreground">Explore</p>
               <ul className="mt-2 space-y-2 text-coco-muted">
@@ -58,6 +58,27 @@ export function SiteFooter() {
                 </li>
               </ul>
             </div>
+            {site.offices.map((office) => (
+              <div key={office.country} className="max-w-[16rem]">
+                <p className="font-semibold text-foreground">{office.country}</p>
+                <p className="mt-2 text-coco-muted">{office.contactName}</p>
+                <p className="mt-1">
+                  <a href={`tel:${office.mobileTel}`} className="text-coco-husk hover:underline">
+                    {office.mobile}
+                  </a>
+                </p>
+                {office.telephone && office.telephoneTel ? (
+                  <p className="mt-0.5">
+                    <a href={`tel:${office.telephoneTel}`} className="text-coco-husk hover:underline">
+                      {office.telephone}
+                    </a>
+                  </p>
+                ) : null}
+                <p className="mt-2 text-xs leading-relaxed text-coco-muted">
+                  {office.addressLines.join(", ")}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 
