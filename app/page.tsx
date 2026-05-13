@@ -148,6 +148,19 @@ export default function Home() {
                 Coconut cocopeat in the format and weight class that fits your farm, greenhouse, or
                 supply chain—we advise on expansion ratios and logistics across our markets.
               </p>
+              <div className="mt-6 flex flex-col gap-4 rounded-2xl border border-coco-leaf/20 bg-white/90 px-5 py-4 shadow-sm sm:flex-row sm:items-center sm:justify-between sm:px-6">
+                <p className="text-sm leading-relaxed text-coco-muted sm:max-w-xl">
+                  <strong className="font-medium text-foreground">Grow bags with coco peat?</strong>{" "}
+                  See suitable crops, preparation, drainage, feeding, and placement in our planting
+                  guide.
+                </p>
+                <Link
+                  href="/grow-bag-guide"
+                  className="inline-flex shrink-0 items-center justify-center rounded-full bg-coco-leaf px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-coco-husk sm:py-3 sm:px-6"
+                >
+                  Grow bag guide →
+                </Link>
+              </div>
             </div>
             <div className="mt-10 grid grid-cols-1 gap-6 sm:mt-12 sm:grid-cols-2 xl:grid-cols-3">
               {PRODUCTS.map((p) => {

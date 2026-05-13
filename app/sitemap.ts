@@ -18,5 +18,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  return [home, ...productEntries];
+  const growBagGuide = {
+    url: `${siteUrl}/grow-bag-guide`,
+    lastModified,
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  };
+
+  return [home, growBagGuide, ...productEntries];
 }
