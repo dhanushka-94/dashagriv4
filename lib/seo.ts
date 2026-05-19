@@ -1,4 +1,4 @@
-import type { Product } from "@/lib/products";
+import type { ProductData } from "@/lib/product";
 import { site } from "@/lib/site";
 
 /**
@@ -16,7 +16,7 @@ export function absoluteUrl(path: string): string {
 }
 
 export const defaultDescription =
-  "High-quality organic cocopeat from Sri Lanka—5kg blocks, 650g briquettes, and 25–1000kg bales. Serving agriculture and horticulture in Sri Lanka, the USA, and Canada.";
+  "Premium organic cocopeat from Sri Lanka—one trusted growing medium for agriculture and horticulture in Sri Lanka, the USA, and Canada.";
 
 export const seoKeywords = [
   "cocopeat",
@@ -56,7 +56,7 @@ export function websiteJsonLd() {
   };
 }
 
-export function productJsonLd(product: Product, imageAbsoluteUrl: string) {
+export function productJsonLd(product: ProductData, imageAbsoluteUrl: string) {
   return {
     "@context": "https://schema.org",
     "@type": "Product",

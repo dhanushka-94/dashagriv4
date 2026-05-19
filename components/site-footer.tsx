@@ -10,7 +10,7 @@ export function SiteFooter() {
           <div>
             <p className="font-serif text-xl font-semibold text-coco-husk-deep">{site.name}</p>
             <p className="mt-2 max-w-sm text-sm text-coco-muted">
-              Premium cocopeat from Sri Lanka—supplying agriculture and horticulture across{" "}
+              Premium organic cocopeat from Sri Lanka—supplying agriculture and horticulture across{" "}
               {site.regions.join(", ")}.
             </p>
             <div className="mt-5 flex items-center gap-3">
@@ -42,13 +42,23 @@ export function SiteFooter() {
               <p className="font-semibold text-foreground">Explore</p>
               <ul className="mt-2 space-y-2 text-coco-muted">
                 <li>
-                  <Link href="/#about" className="hover:text-coco-husk">
+                  <Link href="/" className="hover:text-coco-husk">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/product" className="hover:text-coco-husk">
+                    Product
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about" className="hover:text-coco-husk">
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#products" className="hover:text-coco-husk">
-                    Products
+                  <Link href="/why-us" className="hover:text-coco-husk">
+                    Why us
                   </Link>
                 </li>
                 <li>
@@ -57,7 +67,7 @@ export function SiteFooter() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#contact" className="hover:text-coco-husk">
+                  <Link href="/contact" className="hover:text-coco-husk">
                     Contact
                   </Link>
                 </li>

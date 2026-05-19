@@ -9,7 +9,7 @@ export function SiteHeader() {
     <HeaderSticky>
       <div className="mx-auto flex min-h-[4.25rem] max-w-6xl items-center justify-between gap-3 px-4 py-2 sm:px-6 sm:py-0">
         <Logo className="min-w-0 shrink" />
-        <nav className="hidden items-center gap-6 lg:gap-8 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-5 lg:flex xl:gap-7" aria-label="Primary">
           {navLinks.map((item) => (
             <Link
               key={item.href}
@@ -22,7 +22,7 @@ export function SiteHeader() {
         </nav>
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <Link
-            href="/#contact"
+            href="/contact"
             className="hidden rounded-full bg-coco-husk px-3 py-2.5 text-xs font-semibold text-white shadow-sm transition hover:bg-coco-husk-deep sm:inline-flex sm:px-4 sm:text-sm"
           >
             Get a quote

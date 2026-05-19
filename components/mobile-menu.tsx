@@ -65,7 +65,7 @@ export function MobileMenu() {
               ))}
             </ul>
             <Link
-              href="/#contact"
+              href="/contact"
               className="mt-6 flex min-h-12 w-full items-center justify-center rounded-full bg-coco-husk px-6 text-base font-semibold text-white"
               onClick={() => setOpen(false)}
             >

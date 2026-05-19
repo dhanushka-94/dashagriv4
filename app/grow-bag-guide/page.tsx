@@ -86,14 +86,14 @@ export default function GrowBagGuidePage() {
             </p>
             <p className="mt-4">
               <Link
-                href="/#products"
+                href="/product"
                 className="text-sm font-semibold text-coco-husk hover:text-coco-husk-deep hover:underline"
               >
-                ← View cocopeat products
+                ← View our product
               </Link>
               <span className="mx-2 text-coco-sand">·</span>
               <Link
-                href="/#contact"
+                href="/contact"
                 className="text-sm font-semibold text-coco-leaf hover:text-coco-husk hover:underline"
               >
                 Contact us for supply
@@ -188,13 +188,13 @@ export default function GrowBagGuidePage() {
 
           <div className="mt-12 flex flex-col gap-3 border-t border-coco-sand pt-10 sm:flex-row sm:flex-wrap">
             <Link
-              href="/#products"
+              href="/product"
               className="inline-flex min-h-12 items-center justify-center rounded-full border-2 border-coco-husk/25 bg-white px-8 text-base font-semibold text-coco-husk transition hover:border-coco-husk/50"
             >
-              Explore products
+              View product
             </Link>
             <Link
-              href="/#contact"
+              href="/contact"
               className="inline-flex min-h-12 items-center justify-center rounded-full bg-coco-husk px-8 text-base font-semibold text-white shadow-md transition hover:bg-coco-husk-deep"
             >
               Get a quote
