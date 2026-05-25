@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { QuoteButton } from "@/components/quote-contact-provider";
 import { navLinks } from "@/lib/nav";
 
 export function MobileMenu() {
@@ -64,13 +65,12 @@ export function MobileMenu() {
                 </li>
               ))}
             </ul>
-            <Link
-              href="/contact"
+            <QuoteButton
               className="mt-6 flex min-h-12 w-full items-center justify-center rounded-full bg-coco-husk px-6 text-base font-semibold text-white"
-              onClick={() => setOpen(false)}
+              onAfterClick={() => setOpen(false)}
             >
               Get a quote
-            </Link>
+            </QuoteButton>
           </nav>
         </>
       )}

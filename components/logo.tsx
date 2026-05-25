@@ -14,7 +14,7 @@ export function Logo({ className = "", iconClassName = "", showWordmark = true }
       aria-label="DashAgri Coco home"
     >
       <span
-        className={`relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-coco-husk to-coco-husk-deep shadow-sm ring-1 ring-coco-husk/20 ${iconClassName}`}
+        className={`relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-coco-husk to-coco-husk-deep shadow-sm ring-1 ring-coco-husk/25 ${iconClassName}`}
       >
         <svg
           viewBox="0 0 40 40"
@@ -23,17 +23,17 @@ export function Logo({ className = "", iconClassName = "", showWordmark = true }
           className="h-7 w-7 text-white"
           aria-hidden
         >
-          <ellipse cx="20" cy="22" rx="10" ry="11" fill="currentColor" fillOpacity="0.92" />
-          <ellipse cx="20" cy="20" rx="7" ry="8" fill="#faf6f0" fillOpacity="0.35" />
+          <ellipse cx="20" cy="22" rx="10" ry="11" fill="currentColor" fillOpacity="0.95" />
+          <ellipse cx="20" cy="20" rx="7" ry="8" fill="#e8f3eb" fillOpacity="0.5" />
           <path
             d="M20 6c-2 4-6 7-6 12 0 4 3 7 6 8 3-1 6-4 6-8 0-5-4-8-6-12z"
-            fill="#5a8f6a"
+            fill="#8bc49a"
             fillOpacity="0.95"
           />
           <path
             d="M14 14c2-1 4-1 6 0M20 10v4"
-            stroke="#faf6f0"
-            strokeOpacity="0.5"
+            stroke="#ffffff"
+            strokeOpacity="0.6"
             strokeWidth="1.2"
             strokeLinecap="round"
           />
@@ -44,7 +44,7 @@ export function Logo({ className = "", iconClassName = "", showWordmark = true }
           <span className="font-serif text-base font-semibold tracking-tight text-coco-husk-deep sm:text-lg md:text-xl">
             DashAgri
           </span>
-          <span className="mt-0.5 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-coco-leaf">
+          <span className="mt-0.5 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-coco-husk">
             Coco
           </span>
         </span>

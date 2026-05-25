@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { HomeHero } from "@/components/home-hero";
-import { ProductSpotlight } from "@/components/product-spotlight";
+import { HomeProduct } from "@/components/home-product";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { PRODUCT } from "@/lib/product";
@@ -42,7 +42,7 @@ export default function Home() {
       <SiteHeader />
       <main className="flex-1">
         <HomeHero />
-        <ProductSpotlight />
+        <HomeProduct />
       </main>
       <SiteFooter />
     </>

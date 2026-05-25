@@ -13,7 +13,7 @@ export function ContactLocations({ className = "" }: { className?: string }) {
           <p className="mt-3 text-sm text-coco-muted">
             <span className="block">
               Mobile:{" "}
-              <a href={`tel:${office.mobileTel}`} className="font-medium text-coco-husk hover:underline">
+              <a href={`tel:${office.mobileTel}`} className="font-medium text-coco-leaf hover:text-coco-husk-deep hover:underline">
                 {office.mobile}
               </a>
             </span>
@@ -22,7 +22,7 @@ export function ContactLocations({ className = "" }: { className?: string }) {
                 Telephone:{" "}
                 <a
                   href={`tel:${office.telephoneTel}`}
-                  className="font-medium text-coco-husk hover:underline"
+                  className="font-medium text-coco-leaf hover:text-coco-husk-deep hover:underline"
                 >
                   {office.telephone}
                 </a>

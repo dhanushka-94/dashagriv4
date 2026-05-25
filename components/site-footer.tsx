@@ -47,7 +47,7 @@ export function SiteFooter() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/product" className="hover:text-coco-husk">
+                  <Link href="/#product" className="hover:text-coco-husk">
                     Product
                   </Link>
                 </li>
@@ -62,8 +62,8 @@ export function SiteFooter() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/grow-bag-guide" className="hover:text-coco-husk">
-                    Grow bag guide
+                  <Link href="/#how-to-use" className="hover:text-coco-husk">
+                    How to use
                   </Link>
                 </li>
                 <li>

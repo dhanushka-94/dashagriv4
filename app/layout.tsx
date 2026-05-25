@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, Fraunces } from "next/font/google";
 import { BackToTop } from "@/components/back-to-top";
+import { QuoteContactProvider } from "@/components/quote-contact-provider";
 import { JsonLd } from "@/components/seo/json-ld";
 import {
   defaultDescription,
@@ -60,7 +61,7 @@ export const metadata: Metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#fdfbf7",
+  themeColor: "#3d6b4e",
 };
 
 export default function RootLayout({
@@ -73,8 +74,10 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col antialiased">
         <JsonLd data={organizationJsonLd()} />
         <JsonLd data={websiteJsonLd()} />
-        {children}
-        <BackToTop />
+        <QuoteContactProvider>
+          {children}
+          <BackToTop />
+        </QuoteContactProvider>
       </body>
     </html>
   );

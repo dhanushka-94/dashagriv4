@@ -2,6 +2,7 @@ import Link from "next/link";
 import { HeaderSticky } from "@/components/header-sticky";
 import { Logo } from "@/components/logo";
 import { MobileMenu } from "@/components/mobile-menu";
+import { QuoteButton } from "@/components/quote-contact-provider";
 import { navLinks } from "@/lib/nav";
 
 export function SiteHeader() {
@@ -21,12 +22,9 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-          <Link
-            href="/contact"
-            className="hidden rounded-full bg-coco-husk px-3 py-2.5 text-xs font-semibold text-white shadow-sm transition hover:bg-coco-husk-deep sm:inline-flex sm:px-4 sm:text-sm"
-          >
+          <QuoteButton className="hidden rounded-full bg-coco-husk px-3 py-2.5 text-xs font-semibold text-white shadow-sm transition hover:bg-coco-husk-deep sm:inline-flex sm:px-4 sm:text-sm">
             Get a quote
-          </Link>
+          </QuoteButton>
           <MobileMenu />
         </div>
       </div>

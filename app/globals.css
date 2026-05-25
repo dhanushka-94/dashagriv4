@@ -1,16 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fdfbf7;
-  --foreground: #2c2416;
-  --coco-husk: #6b4423;
-  --coco-husk-deep: #4a2f1f;
-  --coco-leaf: #3d6b4e;
-  --coco-leaf-muted: #5a8f6a;
-  --coco-sand: #e8dcc8;
-  --coco-cream: #faf6f0;
-  --coco-muted: #6b6358;
-  --coco-accent: #c4a574;
+  --background: #f8fbf8;
+  --foreground: #1e2e24;
+  /* Logo green — primary brand */
+  --coco-husk: #3d6b4e;
+  --coco-husk-deep: #2a4d38;
+  --coco-leaf: #4a8f5f;
+  --coco-leaf-muted: #6aad7a;
+  --coco-leaf-light: #e8f3eb;
+  --coco-sand: #dce8df;
+  --coco-cream: #f4faf5;
+  --coco-muted: #5a6b60;
+  --coco-accent: #8bc49a;
+  --coco-earth: #6b4423;
 }
 
 @theme inline {
@@ -20,10 +23,12 @@
   --color-coco-husk-deep: var(--coco-husk-deep);
   --color-coco-leaf: var(--coco-leaf);
   --color-coco-leaf-muted: var(--coco-leaf-muted);
+  --color-coco-leaf-light: var(--coco-leaf-light);
   --color-coco-sand: var(--coco-sand);
   --color-coco-cream: var(--coco-cream);
   --color-coco-muted: var(--coco-muted);
   --color-coco-accent: var(--coco-accent);
+  --color-coco-earth: var(--coco-earth);
   --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-fraunces), ui-serif, Georgia, serif;
 }
