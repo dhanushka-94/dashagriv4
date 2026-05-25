@@ -35,18 +35,16 @@ export function HomeHero() {
             </a>
           </div>
         </div>
-        <figure className="overflow-hidden rounded-2xl border border-coco-sand bg-white p-4 shadow-lg sm:p-6">
-          <div className="relative aspect-[113/40] w-full">
-            <Image
-              src={src}
-              alt={alt}
-              fill
-              className="object-contain object-center"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              priority
-            />
-          </div>
-        </figure>
+        <div className="relative w-full min-h-[12rem] aspect-[113/28] sm:min-h-[14rem] sm:aspect-[113/26] lg:min-h-[18rem] lg:aspect-[113/24]">
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            className="object-contain object-center"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            priority
+          />
+        </div>
       </div>
     </section>
   );

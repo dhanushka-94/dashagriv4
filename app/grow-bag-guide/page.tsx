@@ -106,18 +106,16 @@ export default function GrowBagGuidePage() {
             </p>
           </header>
 
-          <figure className="mt-10 overflow-hidden rounded-2xl border border-coco-sand bg-white p-4 shadow-sm sm:p-6">
-            <div className="relative aspect-[113/40] w-full">
-              <Image
-                src={productImage.src}
-                alt={productImage.alt}
-                fill
-                className="object-contain object-center"
-                sizes="(max-width: 768px) 100vw, 672px"
-                priority
-              />
-            </div>
-          </figure>
+          <div className="relative mx-auto mt-10 w-full min-h-[12rem] aspect-[113/28] sm:min-h-[16rem] sm:aspect-[113/24]">
+            <Image
+              src={productImage.src}
+              alt={productImage.alt}
+              fill
+              className="object-contain object-center"
+              sizes="(max-width: 768px) 100vw, 672px"
+              priority
+            />
+          </div>
 
           <section className="mt-12" aria-labelledby="how-to-heading">
             <h2 id="how-to-heading" className="sr-only">

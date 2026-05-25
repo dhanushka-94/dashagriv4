@@ -51,19 +51,16 @@ export default function ProductPage() {
             </p>
 
             <div className="mt-10 grid gap-8 lg:grid-cols-2 lg:gap-12">
-              <figure className="overflow-hidden rounded-2xl border border-coco-sand bg-white p-4 shadow-md sm:p-6">
-                <div className="relative aspect-[113/40] w-full">
-                  <Image
-                    src={src}
-                    alt={alt}
-                    fill
-                    className="object-contain object-center"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    priority
-                  />
-                </div>
-                <figcaption className="mt-3 text-center text-sm text-coco-muted">Product image</figcaption>
-              </figure>
+              <div className="relative w-full min-h-[14rem] aspect-[113/26] sm:min-h-[18rem] sm:aspect-[113/24] lg:min-h-[20rem]">
+                <Image
+                  src={src}
+                  alt={alt}
+                  fill
+                  className="object-contain object-center"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+              </div>
               <figure className="overflow-hidden rounded-2xl border border-coco-sand bg-white p-4 shadow-md sm:p-6">
                 <div className="relative aspect-[4/3] w-full">
                   <Image

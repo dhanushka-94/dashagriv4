@@ -29,19 +29,18 @@ export function HomeProduct() {
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-coco-muted">{PRODUCT.shortDesc}</p>
 
-          <div className="mt-10 grid gap-8 lg:grid-cols-2">
-            <figure className="overflow-hidden rounded-2xl border border-coco-sand bg-coco-cream/50 p-4 shadow-sm sm:p-6">
-              <div className="relative aspect-[113/40] w-full">
-                <Image
-                  src={src}
-                  alt={alt}
-                  fill
-                  className="object-contain object-center"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  priority
-                />
-              </div>
-            </figure>
+          <div className="relative mx-auto mt-10 w-full max-w-5xl min-h-[14rem] aspect-[113/26] sm:min-h-[18rem] sm:aspect-[113/24] lg:min-h-[22rem] lg:aspect-[113/22]">
+            <Image
+              src={src}
+              alt={alt}
+              fill
+              className="object-contain object-center"
+              sizes="(max-width: 1280px) 90vw, 100vw"
+              priority
+            />
+          </div>
+
+          <div className="mt-10 grid gap-8 lg:grid-cols-1 lg:max-w-2xl lg:mx-auto">
             <figure className="overflow-hidden rounded-2xl border border-coco-sand bg-coco-cream/50 p-4 shadow-sm sm:p-6">
               <div className="relative aspect-[4/3] w-full">
                 <Image
