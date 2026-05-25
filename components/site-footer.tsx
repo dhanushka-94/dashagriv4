@@ -10,7 +10,7 @@ export function SiteFooter() {
           <div>
             <p className="font-serif text-xl font-semibold text-coco-husk-deep">{site.name}</p>
             <p className="mt-2 max-w-sm text-sm text-coco-muted">
-              Premium organic cocopeat from Sri Lanka—supplying agriculture and horticulture across{" "}
+              Coco peat grow bags from Sri Lanka—supplying home and commercial growers across{" "}
               {site.regions.join(", ")}.
             </p>
             <div className="mt-5 flex items-center gap-3">

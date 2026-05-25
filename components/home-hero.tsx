@@ -9,7 +9,7 @@ export function HomeHero() {
     <section className="relative isolate min-h-[28rem] overflow-hidden border-b border-coco-sand/80 sm:min-h-[32rem]">
       <Image
         src={HERO_BACKGROUND}
-        alt="Commercial greenhouse with cocopeat grow bags"
+        alt="Greenhouse cultivation with coco peat grow bags"
         fill
         priority
         className="object-cover object-center"

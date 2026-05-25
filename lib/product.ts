@@ -1,66 +1,67 @@
-import { getProductImageAlt, getProductImageSrc } from "@/lib/site-images";
+import {
+  BROCHURE_IMAGE,
+  BROCHURE_IMAGE_ALT,
+  PRODUCT_IMAGE,
+  PRODUCT_IMAGE_ALT,
+} from "@/lib/site-images";
 
-export type PackFormat = {
-  name: string;
-  description: string;
+export type ProductSpec = {
+  label: string;
+  value: string;
 };
 
 export type ProductData = {
   slug: string;
   title: string;
   tagline: string;
+  slogan: string;
   shortDesc: string;
   paragraphs: readonly string[];
   highlights: readonly string[];
-  formats: readonly PackFormat[];
-  imageIndex: number;
+  specs: readonly ProductSpec[];
+  imageSrc: string;
+  imageAlt: string;
+  brochureSrc: string;
+  brochureAlt: string;
 };
 
 export const PRODUCT: ProductData = {
-  slug: "cocopeat",
-  title: "Premium organic cocopeat",
-  tagline: "Sri Lankan coconut coir for stronger roots, better moisture, and cleaner growing.",
+  slug: "coco-peat-grow-bag",
+  title: "Coco Peat Grow Bag",
+  tagline: "Plain white poly grow bag filled with premium Sri Lankan coco peat—ready for balconies, patios, and kitchen gardens.",
+  slogan: "Grow Fresh, Eat Healthy!",
   shortDesc:
-    "100% organic, eco-friendly cocopeat—engineered for water retention, soil aeration, and reliable performance in greenhouses, farms, and home gardens.",
+    "Pre-filled elongated grow bag with 70% washed coco chips and 30% low EC coco pith—low salinity, balanced pH, and Dash Agri Coco branding only.",
   paragraphs: [
-    "DashAgri Coco supplies premium cocopeat sourced directly from Sri Lanka, a region known for high-quality coconut-based growing media. Our substrate balances moisture and air in the root zone so plants establish faster and stay healthier through the season.",
-    "Whether you run a commercial greenhouse, repack for distribution, or grow on a balcony, we help you choose the right format and hydration approach for your crop and climate. We serve customers across Sri Lanka, the United States, and Canada.",
+    "Our coco peat grow bag is an elongated plain white poly bag—113 cm long, 19 cm wide, and 10 cm gusset height—pre-packed with a professional-grade substrate blend from Sri Lanka. No third-party poly pack branding; only Dash Agri Coco.",
+    "The medium combines 70% washed coco chips for structure and aeration with 30% low EC coco pith for moisture retention. EC is less than 1 mS/cm and pH is maintained between 5.5 and 6.5 for reliable germination and steady growth in home and greenhouse settings.",
+    "Ideal for coriander, mint, basil, lettuce, strawberries, chili, tomatoes, and more. We supply growers and distributors across Sri Lanka, the United States, and Canada.",
   ],
   highlights: [
-    "100% organic coconut coir from Sri Lanka",
-    "Excellent water retention with good drainage",
-    "Clean, uniform medium—no mud or weeds",
-    "Suitable for greenhouses, nurseries, rooftops, and balconies",
-    "Supply and logistics support in Sri Lanka, USA, and Canada",
+    "113 cm × 19 cm × 10 cm elongated grow bag",
+    "70% washed coco chips · 30% low EC coco pith",
+    "EC less than 1 mS/cm · pH 5.5–6.5",
+    "Plain white poly—Dash Agri Coco branding only",
+    "Balconies, terraces, kitchens, and greenhouses",
   ],
-  formats: [
-    {
-      name: "5kg block",
-      description: "Compressed blocks for nurseries, potting, and consistent batch expansion.",
-    },
-    {
-      name: "650g briquettes",
-      description: "Lightweight units for efficient shipping, trials, and retail-friendly packs.",
-    },
-    {
-      name: "25kg bales",
-      description: "Mid-weight bales for distributors, farms, and regional supply chains.",
-    },
-    {
-      name: "500kg bales",
-      description: "High-volume bales for commercial growers, blending, and bulk repacking.",
-    },
-    {
-      name: "1000kg bales",
-      description: "Maximum bulk format for container loads and industrial-scale operations.",
-    },
-  ] satisfies PackFormat[],
-  imageIndex: 0,
+  specs: [
+    { label: "Length", value: "113 cm" },
+    { label: "Width", value: "19 cm" },
+    { label: "Gusset / height", value: "10 cm" },
+    { label: "Material", value: "70% washed coco chips, 30% low EC coco pith" },
+    { label: "EC level", value: "Less than 1 mS/cm" },
+    { label: "pH level", value: "5.5 – 6.5" },
+  ],
+  imageSrc: PRODUCT_IMAGE,
+  imageAlt: PRODUCT_IMAGE_ALT,
+  brochureSrc: BROCHURE_IMAGE,
+  brochureAlt: BROCHURE_IMAGE_ALT,
 } as const;
 
 export function getProductImage() {
-  return {
-    src: getProductImageSrc(PRODUCT.imageIndex),
-    alt: getProductImageAlt(PRODUCT.imageIndex),
-  };
+  return { src: PRODUCT.imageSrc, alt: PRODUCT.imageAlt };
+}
+
+export function getBrochureImage() {
+  return { src: PRODUCT.brochureSrc, alt: PRODUCT.brochureAlt };
 }

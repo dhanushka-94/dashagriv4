@@ -7,26 +7,14 @@ export const HERO_BACKGROUND = enc("image (1) (1).jpg");
 /** About section supporting image. */
 export const ABOUT_IMAGE = enc("image (2) (1).jpg");
 
-const PRODUCT_FILES = [
-  "image (1) (1).jpg",
-  "image (2) (1).jpg",
-  "image (3) (1).jpg",
-  "image (4) (1).jpg",
-  "image (1) (1).jpg",
-] as const;
+/** Coco peat grow bag — product shot (white poly, Dash Agri Coco branding). */
+export const PRODUCT_IMAGE = enc("product image.png");
 
-const PRODUCT_ALTS: readonly string[] = [
-  "Cocopeat grow bags in a commercial greenhouse",
-  "Seedlings thriving in premium growing media",
-  "Cocopeat substrate with watering can",
-  "Young plant and tools on cocopeat",
-  "Cocopeat cultivation and horticulture",
-];
+/** Product brochure / detail graphic. */
+export const BROCHURE_IMAGE = enc("detaild image.png");
 
-export function getProductImageSrc(index: number): string {
-  return enc(PRODUCT_FILES[index] ?? PRODUCT_FILES[0]);
-}
+export const PRODUCT_IMAGE_ALT =
+  "Dash Agri Coco peat grow bag — plain white poly, elongated format with herbs and vegetables growing from the substrate";
 
-export function getProductImageAlt(index: number): string {
-  return PRODUCT_ALTS[index] ?? PRODUCT_ALTS[0];
-}
+export const BROCHURE_IMAGE_ALT =
+  "Dash Agri Coco peat grow bag brochure — dimensions, 70% washed coco chips and 30% low EC coco pith, growing guide highlights";

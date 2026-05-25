@@ -16,20 +16,19 @@ export function absoluteUrl(path: string): string {
 }
 
 export const defaultDescription =
-  "Premium organic cocopeat from Sri Lanka—one trusted growing medium for agriculture and horticulture in Sri Lanka, the USA, and Canada.";
+  "Dash Agri Coco peat grow bags from Sri Lanka—70% washed coco chips, 30% low EC coco pith, low salinity, and supply across Sri Lanka, the USA, and Canada.";
 
 export const seoKeywords = [
-  "cocopeat",
-  "coconut coir",
-  "grow media",
+  "coco peat grow bag",
+  "cocopeat grow bag",
+  "coconut coir grow bag",
   "Sri Lanka cocopeat",
-  "organic substrate",
-  "greenhouse growing media",
-  "cocopeat bales",
-  "cocopeat briquettes",
+  "low EC coco peat",
+  "balcony gardening",
+  "kitchen garden",
+  "Dash Agri Coco",
   "DashAgri Coco",
   "horticulture",
-  "agriculture",
 ] as const;
 
 export function organizationJsonLd() {
@@ -62,14 +61,21 @@ export function productJsonLd(product: ProductData, imageAbsoluteUrl: string) {
     "@type": "Product",
     name: product.title,
     description: product.shortDesc,
-    image: [imageAbsoluteUrl],
+    image: [imageAbsoluteUrl, absoluteUrl(product.brochureSrc)],
     brand: { "@type": "Brand", name: site.name },
-    category: "Growing media — cocopeat / coconut coir",
-    additionalProperty: product.highlights.map((text) => ({
-      "@type": "PropertyValue",
-      name: "Feature",
-      value: text,
-    })),
+    category: "Growing media — coco peat grow bag",
+    additionalProperty: [
+      ...product.specs.map((spec) => ({
+        "@type": "PropertyValue",
+        name: spec.label,
+        value: spec.value,
+      })),
+      ...product.highlights.map((text) => ({
+        "@type": "PropertyValue",
+        name: "Feature",
+        value: text,
+      })),
+    ],
   };
 }
 
@@ -79,11 +85,11 @@ export function breadcrumbJsonLd(
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((el, i) => ({
+    itemListElement: items.map((item, index) => ({
       "@type": "ListItem",
-      position: i + 1,
-      name: el.name,
-      item: el.item,
+      position: index + 1,
+      name: item.name,
+      item: item.item,
     })),
   };
 }

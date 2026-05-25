@@ -1,18 +1,28 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/seo/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import {
-  benefitsOfCocoPeat,
+  closingMessage,
+  guideIntro,
   growBagGuideMeta,
   howToUseSteps,
-  importantConsideration,
-  suitableCrops,
+  howToUseTitle,
+  nutrientStep,
+  plantingInstructions,
+  proTips,
+  recommendedPlants,
+  recommendedPlantsTitle,
+  sunlightRequirement,
+  wateringGuide,
 } from "@/lib/grow-bag-guide-content";
+import { getProductImage } from "@/lib/product";
 import { absoluteUrl, siteUrl } from "@/lib/seo";
 import { site } from "@/lib/site";
-import { HERO_BACKGROUND } from "@/lib/site-images";
+
+const productImage = getProductImage();
 
 export const metadata: Metadata = {
   title: growBagGuideMeta.title,
@@ -25,10 +35,10 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: absoluteUrl(HERO_BACKGROUND),
+        url: absoluteUrl(productImage.src),
         width: 1200,
         height: 630,
-        alt: "Greenhouse cultivation with grow bags and cocopeat",
+        alt: productImage.alt,
       },
     ],
   },
@@ -36,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${growBagGuideMeta.title} | ${site.name}`,
     description: growBagGuideMeta.description,
-    images: [absoluteUrl(HERO_BACKGROUND)],
+    images: [absoluteUrl(productImage.src)],
   },
 };
 
@@ -47,7 +57,7 @@ export default function GrowBagGuidePage() {
         data={{
           "@context": "https://schema.org",
           "@type": "Article",
-          headline: "Grow bag planting guide (coco peat based)",
+          headline: howToUseTitle,
           description: growBagGuideMeta.description,
           url: `${siteUrl}/grow-bag-guide`,
           author: { "@type": "Organization", name: site.name, url: siteUrl },
@@ -73,23 +83,18 @@ export default function GrowBagGuidePage() {
 
           <header className="mt-8 border-b border-coco-sand pb-8">
             <p className="text-xs font-semibold uppercase tracking-wider text-coco-leaf">
-              Resource · Coco peat
+              Resource · {site.name}
             </p>
             <h1 className="mt-3 font-serif text-3xl font-semibold tracking-tight text-coco-husk-deep sm:text-4xl">
-              Grow bag planting guide{" "}
-              <span className="text-coco-leaf">(coco peat based)</span>
+              {howToUseTitle}
             </h1>
-            <p className="mt-4 text-lg leading-relaxed text-coco-muted">
-              Practical steps for {site.name} grow bags filled with coco peat—crop ideas, setup,
-              feeding, and watering so you get strong, healthy plants on patios, rooftops, and in the
-              greenhouse.
-            </p>
+            <p className="mt-4 text-lg leading-relaxed text-coco-muted">{guideIntro}</p>
             <p className="mt-4">
               <Link
                 href="/product"
                 className="text-sm font-semibold text-coco-husk hover:text-coco-husk-deep hover:underline"
               >
-                ← View our product
+                View product specifications
               </Link>
               <span className="mx-2 text-coco-sand">·</span>
               <Link
@@ -101,73 +106,107 @@ export default function GrowBagGuidePage() {
             </p>
           </header>
 
-          <section className="mt-12" aria-labelledby="suitable-crops-heading">
-            <h2
-              id="suitable-crops-heading"
-              className="font-serif text-2xl font-semibold text-coco-husk-deep sm:text-3xl"
-            >
-              Suitable crops
-            </h2>
-            <p className="mt-3 text-coco-muted">
-              Match crops to slot use—some crops share an opening; others need one plant per hole.
-            </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              {suitableCrops.map((block) => (
-                <article
-                  key={block.title}
-                  className="rounded-2xl border border-coco-sand bg-white p-5 shadow-sm sm:p-6"
-                >
-                  <h3 className="font-serif text-lg font-semibold text-coco-husk-deep">{block.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-coco-muted sm:text-base">{block.body}</p>
-                </article>
-              ))}
+          <figure className="mt-10 overflow-hidden rounded-2xl border border-coco-sand bg-white p-4 shadow-sm sm:p-6">
+            <div className="relative aspect-[113/40] w-full">
+              <Image
+                src={productImage.src}
+                alt={productImage.alt}
+                fill
+                className="object-contain object-center"
+                sizes="(max-width: 768px) 100vw, 672px"
+                priority
+              />
             </div>
-          </section>
+          </figure>
 
-          <section className="mt-16" aria-labelledby="how-to-heading">
-            <h2
-              id="how-to-heading"
-              className="font-serif text-2xl font-semibold text-coco-husk-deep sm:text-3xl"
-            >
-              How to use the grow bag
+          <section className="mt-12" aria-labelledby="how-to-heading">
+            <h2 id="how-to-heading" className="sr-only">
+              Steps
             </h2>
-            <p className="mt-3 max-w-2xl text-coco-muted">
-              Follow these steps in order—from hydrating the medium to choosing a sunny spot.
-            </p>
-            <ol className="mt-8 space-y-4">
+            <ol className="space-y-4">
               {howToUseSteps.map((step, index) => (
                 <li
                   key={step.title}
-                  className="flex gap-4 rounded-2xl border border-coco-sand/80 bg-coco-cream/40 p-5 sm:gap-5 sm:p-6"
+                  className="rounded-2xl border border-coco-sand/80 bg-coco-cream/40 p-5 sm:p-6"
                 >
-                  <span
-                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-coco-husk text-sm font-bold text-white"
-                    aria-hidden
-                  >
-                    {index + 1}
-                  </span>
-                  <div className="min-w-0">
-                    <h3 className="font-semibold text-foreground">{step.title}</h3>
-                    <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-coco-muted sm:text-base">
-                      {step.points.map((pt) => (
-                        <li key={pt}>{pt}</li>
-                      ))}
-                    </ul>
-                  </div>
+                  <h3 className="font-semibold text-foreground">
+                    <span className="text-coco-leaf">{index + 1}.</span> {step.title}
+                  </h3>
+                  <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-coco-muted sm:text-base">
+                    {step.points.map((pt) => (
+                      <li key={pt}>{pt}</li>
+                    ))}
+                  </ul>
                 </li>
               ))}
             </ol>
           </section>
 
-          <section className="mt-16" aria-labelledby="benefits-heading">
+          <section className="mt-12" aria-labelledby="plants-heading">
             <h2
-              id="benefits-heading"
+              id="plants-heading"
               className="font-serif text-2xl font-semibold text-coco-husk-deep sm:text-3xl"
             >
-              Benefits of using coco peat
+              {recommendedPlantsTitle}
+            </h2>
+            <ul className="mt-6 space-y-4">
+              {recommendedPlants.map((group) => (
+                <li
+                  key={group.level}
+                  className="rounded-2xl border border-coco-sand bg-white p-5 shadow-sm sm:p-6"
+                >
+                  <h3 className="font-serif text-lg font-semibold text-coco-husk-deep">{group.level}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-coco-muted sm:text-base">
+                    {group.plants.join(", ")}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="mt-12 rounded-2xl border border-coco-sand bg-white p-5 shadow-sm sm:p-6">
+            <h2 className="font-serif text-xl font-semibold text-coco-husk-deep sm:text-2xl">
+              {plantingInstructions.title}
+            </h2>
+            <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm leading-relaxed text-coco-muted sm:text-base">
+              {plantingInstructions.points.map((pt) => (
+                <li key={pt}>{pt}</li>
+              ))}
+            </ol>
+          </section>
+
+          <section className="mt-8 rounded-2xl border border-coco-sand bg-coco-cream/40 p-5 sm:p-6">
+            <h2 className="font-semibold text-foreground">{nutrientStep.title}</h2>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-coco-muted sm:text-base">
+              {nutrientStep.points.map((pt) => (
+                <li key={pt}>{pt}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="mt-8 rounded-2xl border border-coco-sand bg-white p-5 shadow-sm sm:p-6">
+            <h2 className="font-serif text-xl font-semibold text-coco-husk-deep">{wateringGuide.title}</h2>
+            <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-coco-muted sm:text-base">
+              {wateringGuide.points.map((pt) => (
+                <li key={pt}>{pt}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="mt-8 rounded-2xl border-2 border-coco-husk/20 bg-coco-cream/60 px-6 py-6">
+            <h2 className="font-serif text-xl font-semibold text-coco-husk-deep">{sunlightRequirement.title}</h2>
+            <p className="mt-3 text-base font-medium text-foreground">{sunlightRequirement.value}</p>
+          </section>
+
+          <section className="mt-12" aria-labelledby="tips-heading">
+            <h2
+              id="tips-heading"
+              className="font-serif text-2xl font-semibold text-coco-husk-deep sm:text-3xl"
+            >
+              Pro Tips
             </h2>
             <ul className="mt-6 space-y-3 rounded-2xl border border-coco-sand bg-white px-6 py-6 shadow-sm">
-              {benefitsOfCocoPeat.map((line) => (
+              {proTips.map((line) => (
                 <li key={line} className="flex gap-3 text-coco-muted">
                   <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-coco-leaf" aria-hidden />
                   {line}
@@ -176,14 +215,11 @@ export default function GrowBagGuidePage() {
             </ul>
           </section>
 
-          <aside
-            className="mt-12 rounded-2xl border-2 border-coco-husk/25 bg-coco-cream/80 px-6 py-6 sm:px-8"
-            aria-labelledby="important-heading"
-          >
-            <h2 id="important-heading" className="font-serif text-lg font-semibold text-coco-husk-deep">
-              Important consideration
-            </h2>
-            <p className="mt-3 text-base leading-relaxed text-coco-muted">{importantConsideration}</p>
+          <aside className="mt-12 rounded-2xl border border-coco-sand bg-coco-husk/5 px-6 py-8 text-center sm:px-10">
+            <p className="font-serif text-xl font-semibold text-coco-husk-deep">{closingMessage.heading}</p>
+            <p className="mt-3 font-serif text-2xl text-coco-leaf sm:text-3xl">
+              &ldquo;{closingMessage.quote}&rdquo;
+            </p>
           </aside>
 
           <div className="mt-12 flex flex-col gap-3 border-t border-coco-sand pt-10 sm:flex-row sm:flex-wrap">

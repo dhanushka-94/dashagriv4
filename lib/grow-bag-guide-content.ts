@@ -1,91 +1,73 @@
-/** Copy for the coco peat grow bag planting guide — edit here to update the public page. */
+/** Copy for the coco peat grow bag guide — edit here to update the public page. */
 
 export const growBagGuideMeta = {
-  title: "Grow bag planting guide (coco peat)",
+  title: "How to use a coco peat grow bag",
   description:
-    "How to use coco peat grow bags: suitable crops, preparation, drainage, planting, feeding, watering, and benefits for vegetables, herbs, strawberries, and more.",
+    "Step-by-step guide for Dash Agri Coco peat grow bags: hydration, drainage, recommended plants, planting, nutrients, watering, sunlight, and pro tips.",
 };
 
-export const suitableCrops = [
-  {
-    title: "Vegetables",
-    body:
-      "Tomatoes (cherry or regular), chili peppers, bell peppers, cucumbers (with support), and eggplant perform well due to the moisture retention and drainage properties of coco peat.",
-  },
-  {
-    title: "Leafy greens",
-    body:
-      "Lettuce, spinach, kale, and arugula are fast-growing and ideal for continuous harvesting. Multiple plants can be grown per slot.",
-  },
-  {
-    title: "Fruits",
-    body: "Strawberries are highly suitable, with one plant per opening.",
-  },
-  {
-    title: "Herbs",
-    body: "Basil, mint, coriander, and parsley are ideal for small kitchen garden setups.",
-  },
-  {
-    title: "Flowers",
-    body: "Petunias, marigolds, and other small flowering plants can be used for decorative purposes.",
-  },
-] as const;
+export const guideIntro =
+  "Follow these steps for our pre-filled coco peat grow bag—plain white poly, Dash Agri Coco substrate, and an elongated format suited to patios, balconies, and small greenhouses.";
+
+export const howToUseTitle = "How to Use a Coco Peat Grow Bag";
 
 export const howToUseSteps = [
   {
-    title: "Preparation",
+    title: "Step 1 – Hydrate the Coco Peat",
     points: [
-      "Hydrate the coco peat by gradually adding water into each opening.",
-      "Allow 10–15 minutes for expansion until evenly moist.",
-      "Ensure the medium is moist but not waterlogged.",
+      "Add water to the coco peat grow bag before planting.",
+      "Allow the coco peat to absorb water fully.",
     ],
   },
   {
-    title: "Drainage",
+    title: "Step 2 – Make Drainage Holes",
     points: [
-      "Create 2–4 small holes at the bottom of the bag to allow excess water to drain.",
-      "Proper drainage prevents root rot.",
-    ],
-  },
-  {
-    title: "Planting",
-    points: [
-      "Use one plant per opening.",
-      "Make a small hole in the coco peat, place seeds or seedlings, and cover lightly.",
-    ],
-  },
-  {
-    title: "Nutrient management",
-    points: [
-      "Coco peat does not contain nutrients.",
-      "Apply liquid fertilizer weekly or mix compost into each planting hole.",
-    ],
-  },
-  {
-    title: "Watering",
-    points: [
-      "Maintain consistent moisture.",
-      "Water daily or as required depending on weather conditions.",
-      "Avoid overwatering.",
-    ],
-  },
-  {
-    title: "Placement",
-    points: [
-      "Position the grow bag on a flat or slightly elevated surface.",
-      "Ensure 4–6 hours of sunlight daily.",
+      "Create several small holes at the bottom or sides for water drainage.",
     ],
   },
 ] as const;
 
-export const benefitsOfCocoPeat = [
-  "Clean and easy to handle with no mud or weeds",
-  "High water retention with good drainage",
-  "Promotes strong root growth due to better aeration",
-  "Reduced risk of pests and diseases",
-  "Lightweight and suitable for small spaces such as rooftops or balconies",
-  "Consistent and uniform growing medium",
+export const recommendedPlantsTitle = "Recommended Plants";
+
+export const recommendedPlants = [
+  { level: "Easy", plants: ["Coriander", "Mint", "Basil", "Lettuce"] },
+  { level: "Medium", plants: ["Strawberries"] },
+  { level: "Advanced", plants: ["Chili", "Tomatoes"] },
 ] as const;
 
-export const importantConsideration =
-  "Coco peat contains no natural nutrients. Regular feeding through fertilizers or organic compost is essential for healthy plant growth.";
+export const plantingInstructions = {
+  title: "Planting Instructions",
+  points: [
+    "Make a small hole.",
+    "Place seeds or seedlings.",
+    "Cover roots lightly.",
+    "Recommended: 1 plant per hole.",
+  ],
+} as const;
+
+export const nutrientStep = {
+  title: "Step 4 – Add Nutrients",
+  points: ["Add liquid fertilizer or nutrients after planting."],
+} as const;
+
+export const wateringGuide = {
+  title: "Watering Guide",
+  points: ["Keep moist.", "Do NOT flood with water."],
+} as const;
+
+export const sunlightRequirement = {
+  title: "Sunlight Requirement",
+  value: "4–6 hours sunlight daily",
+} as const;
+
+export const proTips = [
+  "Support tall plants with sticks.",
+  "Raise bag for better drainage.",
+  "Rotate for even sunlight.",
+  "Great for balconies and patios.",
+] as const;
+
+export const closingMessage = {
+  heading: "Happy Gardening",
+  quote: "Grow Fresh, Eat Healthy!",
+} as const;

@@ -6,7 +6,9 @@ import { SiteHeader } from "@/components/site-header";
 import { PRODUCT } from "@/lib/product";
 import { absoluteUrl, defaultDescription, siteUrl } from "@/lib/seo";
 import { site } from "@/lib/site";
-import { HERO_BACKGROUND } from "@/lib/site-images";
+import { getProductImage } from "@/lib/product";
+
+const productImage = getProductImage();
 
 export const metadata: Metadata = {
   title: `${PRODUCT.title} from Sri Lanka`,
@@ -19,10 +21,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: absoluteUrl(HERO_BACKGROUND),
+        url: absoluteUrl(productImage.src),
         width: 1200,
         height: 630,
-        alt: "Commercial greenhouse with cocopeat grow bags",
+        alt: productImage.alt,
       },
     ],
   },
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${site.name} | ${PRODUCT.title}`,
     description: PRODUCT.shortDesc,
-    images: [absoluteUrl(HERO_BACKGROUND)],
+    images: [absoluteUrl(productImage.src)],
   },
 };
 

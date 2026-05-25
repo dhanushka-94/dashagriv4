@@ -27,7 +27,7 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${site.name} | Premium organic cocopeat from Sri Lanka`,
+    default: `${site.name} | Coco peat grow bags from Sri Lanka`,
     template: `%s | ${site.name}`,
   },
   description: defaultDescription,
@@ -46,12 +46,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: site.name,
-    title: `${site.name} | Premium organic cocopeat from Sri Lanka`,
+    title: `${site.name} | Coco peat grow bags from Sri Lanka`,
     description: defaultDescription,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} | Premium organic cocopeat from Sri Lanka`,
+    title: `${site.name} | Coco peat grow bags from Sri Lanka`,
     description: defaultDescription,
   },
   category: "business",

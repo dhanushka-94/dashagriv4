@@ -9,11 +9,21 @@ export function ProductSpotlight() {
     <section className="py-14 sm:py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
-          <div className="relative aspect-square max-w-lg overflow-hidden rounded-2xl border border-coco-sand bg-coco-sand/40 shadow-lg lg:max-w-none">
-            <Image src={src} alt={alt} fill className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 50vw" priority />
-          </div>
+          <figure className="overflow-hidden rounded-2xl border border-coco-sand bg-white p-4 shadow-lg sm:p-6 lg:max-w-none">
+            <div className="relative aspect-[113/40] w-full max-w-lg lg:max-w-none">
+              <Image
+                src={src}
+                alt={alt}
+                fill
+                className="object-contain object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+            </div>
+          </figure>
           <div className="min-w-0">
-            <h2 className="font-serif text-2xl font-semibold tracking-tight text-coco-husk-deep sm:text-3xl">
+            <p className="text-sm font-semibold uppercase tracking-wider text-coco-leaf">{PRODUCT.slogan}</p>
+            <h2 className="mt-2 font-serif text-2xl font-semibold tracking-tight text-coco-husk-deep sm:text-3xl">
               {PRODUCT.title}
             </h2>
             <p className="mt-4 text-base leading-relaxed text-coco-muted sm:text-lg">{PRODUCT.shortDesc}</p>
@@ -36,7 +46,7 @@ export function ProductSpotlight() {
                 href="/grow-bag-guide"
                 className="inline-flex min-h-12 items-center justify-center rounded-full border-2 border-coco-husk/25 px-8 text-base font-semibold text-coco-husk transition hover:border-coco-husk/50"
               >
-                Grow bag guide
+                How to use
               </Link>
               <Link
                 href="/contact"
