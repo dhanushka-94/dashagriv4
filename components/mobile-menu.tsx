@@ -20,7 +20,7 @@ export function MobileMenu() {
   }, [open]);
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
@@ -40,7 +40,7 @@ export function MobileMenu() {
         )}
       </button>
 
-      {open && (
+      {open ? (
         <>
           <button
             type="button"
@@ -50,7 +50,7 @@ export function MobileMenu() {
           />
           <nav
             id="mobile-menu-panel"
-            className="fixed right-0 top-[4.25rem] z-[60] max-h-[calc(100dvh-4.25rem)] w-full max-w-sm overflow-y-auto border-b border-coco-sand bg-background px-4 pb-8 pt-4 shadow-xl"
+            className="fixed right-0 top-[4.25rem] z-[60] max-h-[calc(100dvh-4.25rem)] w-full max-w-sm overflow-y-auto border-b border-coco-sand bg-background px-4 pb-8 pt-4 shadow-xl sm:max-w-xs"
           >
             <ul className="flex flex-col gap-1">
               {navLinks.map((item) => (
@@ -73,7 +73,7 @@ export function MobileMenu() {
             </QuoteButton>
           </nav>
         </>
-      )}
+      ) : null}
     </div>
   );
 }

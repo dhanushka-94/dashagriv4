@@ -16,7 +16,7 @@ export default function ContactPage() {
   return (
     <>
       <SiteHeader />
-      <main className="flex-1">
+      <main className="flex-1 min-w-0 w-full">
         <PageHeader
           eyebrow="Contact"
           title="Contact us"
@@ -24,7 +24,7 @@ export default function ContactPage() {
           breadcrumb={[{ label: "Home", href: "/" }, { label: "Contact" }]}
         />
         <section className="py-14 sm:pb-20 md:pb-28">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="mx-auto w-full min-w-0 max-w-6xl px-4 sm:px-6">
             <ContactLocations />
             <div className="relative mt-12 overflow-hidden rounded-2xl bg-gradient-to-br from-coco-husk via-coco-husk-deep to-coco-husk-deep px-5 py-12 text-center shadow-lg sm:rounded-3xl sm:px-8 sm:py-14">
               <div

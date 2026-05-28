@@ -10,7 +10,7 @@ type PageHeaderProps = {
 export function PageHeader({ eyebrow, title, description, breadcrumb }: PageHeaderProps) {
   return (
     <header className="border-b border-coco-sand bg-coco-cream/40">
-      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
+      <div className="mx-auto w-full min-w-0 max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
         {breadcrumb && breadcrumb.length > 0 ? (
           <nav className="text-sm text-coco-muted" aria-label="Breadcrumb">
             <ol className="flex flex-wrap items-center gap-2">

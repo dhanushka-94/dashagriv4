@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { ProductImageDisplay } from "@/components/product-image-display";
 import { JsonLd } from "@/components/seo/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -65,8 +65,8 @@ export default function GrowBagGuidePage() {
         }}
       />
       <SiteHeader />
-      <main className="flex-1 pb-16 pt-8 sm:pb-24 sm:pt-12">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:max-w-4xl">
+      <main className="flex-1 min-w-0 w-full pb-16 pt-8 sm:pb-24 sm:pt-12">
+        <div className="mx-auto w-full min-w-0 max-w-3xl px-4 sm:px-6 lg:max-w-4xl">
           <nav className="text-sm text-coco-muted" aria-label="Breadcrumb">
             <ol className="flex flex-wrap items-center gap-2">
               <li>
@@ -106,16 +106,13 @@ export default function GrowBagGuidePage() {
             </p>
           </header>
 
-          <div className="relative mx-auto mt-10 w-full min-h-[12rem] aspect-[113/28] sm:min-h-[16rem] sm:aspect-[113/24]">
-            <Image
-              src={productImage.src}
-              alt={productImage.alt}
-              fill
-              className="object-contain object-center"
-              sizes="(max-width: 768px) 100vw, 672px"
-              priority
-            />
-          </div>
+          <ProductImageDisplay
+            src={productImage.src}
+            alt={productImage.alt}
+            priority
+            sizes="(max-width: 768px) 100vw, 672px"
+            className="mx-auto mt-10"
+          />
 
           <section className="mt-12" aria-labelledby="how-to-heading">
             <h2 id="how-to-heading" className="sr-only">

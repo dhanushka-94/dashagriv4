@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { ProductImageDisplay } from "@/components/product-image-display";
 import { JsonLd } from "@/components/seo/json-ld";
 import { PageHeader } from "@/components/page-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -37,7 +38,7 @@ export default function ProductPage() {
         ])}
       />
       <SiteHeader />
-      <main className="flex-1">
+      <main className="flex-1 min-w-0 w-full">
         <PageHeader
           eyebrow="Product"
           title={PRODUCT.title}
@@ -45,24 +46,15 @@ export default function ProductPage() {
           breadcrumb={[{ label: "Home", href: "/" }, { label: "Product" }]}
         />
         <section className="py-14 sm:py-20">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="mx-auto w-full min-w-0 max-w-6xl px-4 sm:px-6">
             <p className="text-center font-serif text-xl font-semibold text-coco-leaf sm:text-2xl">
               {PRODUCT.slogan}
             </p>
 
-            <div className="mt-10 grid gap-8 lg:grid-cols-2 lg:gap-12">
-              <div className="relative w-full min-h-[14rem] aspect-[113/26] sm:min-h-[18rem] sm:aspect-[113/24] lg:min-h-[20rem]">
-                <Image
-                  src={src}
-                  alt={alt}
-                  fill
-                  className="object-contain object-center"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  priority
-                />
-              </div>
-              <figure className="overflow-hidden rounded-2xl border border-coco-sand bg-white p-4 shadow-md sm:p-6">
-                <div className="relative aspect-[4/3] w-full">
+            <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
+              <ProductImageDisplay src={src} alt={alt} priority className="min-w-0" />
+              <figure className="min-w-0 overflow-hidden rounded-2xl border border-coco-sand bg-white p-4 shadow-md sm:p-6">
+                <div className="relative aspect-[4/3] w-full min-w-0">
                   <Image
                     src={brochure.src}
                     alt={brochure.alt}
@@ -75,18 +67,23 @@ export default function ProductPage() {
               </figure>
             </div>
 
-            <div className="mt-14 grid gap-12 lg:grid-cols-2 lg:items-start">
+            <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 md:items-start">
               <div className="min-w-0">
                 <h2 className="font-serif text-2xl font-semibold text-coco-husk-deep sm:text-3xl">
                   Specifications
                 </h2>
                 <dl className="mt-6 divide-y divide-coco-sand rounded-2xl border border-coco-sand bg-white shadow-sm">
                   {PRODUCT.specs.map((spec) => (
-                    <div key={spec.label} className="grid gap-1 px-5 py-4 sm:grid-cols-[10rem_1fr] sm:gap-4 sm:px-6">
+                    <div
+                      key={spec.label}
+                      className="grid grid-cols-1 gap-1 px-5 py-4 sm:grid-cols-[minmax(0,8.5rem)_1fr] sm:gap-4 sm:px-6"
+                    >
                       <dt className="text-sm font-semibold uppercase tracking-wide text-coco-husk-deep">
                         {spec.label}
                       </dt>
-                      <dd className="text-sm leading-relaxed text-coco-muted sm:text-base">{spec.value}</dd>
+                      <dd className="break-words text-sm leading-relaxed text-coco-muted sm:text-base">
+                        {spec.value}
+                      </dd>
                     </div>
                   ))}
                 </dl>

@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <>
       <SiteHeader />
-      <main className="flex-1">
+      <main className="flex-1 min-w-0 w-full">
         <HomeHero />
         <HomeProduct />
       </main>

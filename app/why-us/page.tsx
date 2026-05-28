@@ -43,7 +43,7 @@ export default function WhyUsPage() {
   return (
     <>
       <SiteHeader />
-      <main className="flex-1">
+      <main className="flex-1 min-w-0 w-full">
         <PageHeader
           eyebrow="Why us"
           title="Why growers choose us"
@@ -51,8 +51,8 @@ export default function WhyUsPage() {
           breadcrumb={[{ label: "Home", href: "/" }, { label: "Why us" }]}
         />
         <section className="py-14 sm:py-20 md:py-28">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
+          <div className="mx-auto w-full min-w-0 max-w-6xl px-4 sm:px-6">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
               {benefits.map(({ icon: Icon, title, text }) => (
                 <div
                   key={title}

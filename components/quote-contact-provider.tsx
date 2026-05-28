@@ -42,7 +42,7 @@ export function QuoteContactProvider({ children }: { children: React.ReactNode }
     <QuoteContactContext.Provider value={{ openQuoteDialog }}>
       {children}
       {open ? (
-        <div className="fixed inset-0 z-[100] flex items-end justify-center p-4 sm:items-center sm:p-6">
+        <div className="fixed inset-0 z-[100] flex items-end justify-center p-3 sm:items-center sm:p-6">
           <button
             type="button"
             className="absolute inset-0 bg-coco-husk-deep/40 backdrop-blur-sm"
@@ -53,7 +53,7 @@ export function QuoteContactProvider({ children }: { children: React.ReactNode }
             role="dialog"
             aria-modal="true"
             aria-labelledby={titleId}
-            className="relative z-10 max-h-[min(90dvh,40rem)] w-full max-w-lg overflow-y-auto rounded-2xl border border-coco-sand bg-white shadow-2xl sm:max-w-xl"
+            className="relative z-10 max-h-[min(90dvh,40rem)] w-full max-w-[calc(100vw-1.5rem)] overflow-y-auto rounded-2xl border border-coco-sand bg-white shadow-2xl sm:max-w-xl"
           >
             <div className="sticky top-0 z-10 flex items-start justify-between gap-4 border-b border-coco-sand bg-white px-5 py-4 sm:px-6">
               <div>

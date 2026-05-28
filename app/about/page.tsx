@@ -17,7 +17,7 @@ export default function AboutPage() {
   return (
     <>
       <SiteHeader />
-      <main className="flex-1">
+      <main className="flex-1 min-w-0 w-full">
         <PageHeader
           eyebrow="About"
           title="About DashAgri Coco"
@@ -25,8 +25,8 @@ export default function AboutPage() {
           breadcrumb={[{ label: "Home", href: "/" }, { label: "About" }]}
         />
         <section className="py-14 sm:py-20">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 lg:items-center">
+          <div className="mx-auto w-full min-w-0 max-w-6xl px-4 sm:px-6">
+            <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12 md:items-center lg:gap-16">
               <div className="min-w-0 space-y-5 text-base leading-relaxed text-coco-muted sm:text-lg">
                 <p>
                   Our cocopeat is <strong className="font-medium text-foreground">100% organic</strong>,{" "}

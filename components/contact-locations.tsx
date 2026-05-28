@@ -2,11 +2,11 @@ import { site } from "@/lib/site";
 
 export function ContactLocations({ className = "" }: { className?: string }) {
   return (
-    <div className={`grid gap-6 sm:grid-cols-2 ${className}`}>
+    <div className={`grid grid-cols-1 gap-6 sm:grid-cols-2 ${className}`}>
       {site.offices.map((office) => (
         <address
           key={office.country}
-          className="not-italic rounded-2xl border border-coco-sand/80 bg-white/95 px-5 py-5 text-left shadow-sm sm:px-6 sm:py-6"
+          className="min-w-0 not-italic rounded-2xl border border-coco-sand/80 bg-white/95 px-5 py-5 text-left shadow-sm sm:px-6 sm:py-6"
         >
           <p className="text-xs font-bold uppercase tracking-wider text-coco-leaf">{office.country}</p>
           <p className="mt-3 font-semibold text-coco-husk-deep">{office.contactName}</p>

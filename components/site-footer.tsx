@@ -5,9 +5,9 @@ import { FacebookIcon, YouTubeIcon } from "@/components/social-icons";
 export function SiteFooter() {
   return (
     <footer className="border-t border-coco-sand bg-coco-cream">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+      <div className="mx-auto w-full min-w-0 max-w-6xl px-4 py-12 sm:px-6">
         <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
-          <div>
+          <div className="min-w-0">
             <p className="font-serif text-xl font-semibold text-coco-husk-deep">{site.name}</p>
             <p className="mt-2 max-w-sm text-sm text-coco-muted">
               Coco peat grow bags from Sri Lanka—supplying home and commercial growers across{" "}
@@ -37,7 +37,7 @@ export function SiteFooter() {
               </a>
             </div>
           </div>
-          <div className="flex flex-wrap gap-10 text-sm lg:gap-12">
+          <div className="flex min-w-0 flex-wrap gap-8 text-sm sm:gap-10 lg:gap-12">
             <div>
               <p className="font-semibold text-foreground">Explore</p>
               <ul className="mt-2 space-y-2 text-coco-muted">
@@ -74,7 +74,7 @@ export function SiteFooter() {
               </ul>
             </div>
             {site.offices.map((office) => (
-              <div key={office.country} className="max-w-[16rem]">
+              <div key={office.country} className="min-w-0 w-full max-w-[16rem] sm:w-auto">
                 <p className="font-semibold text-foreground">{office.country}</p>
                 <p className="mt-2 text-coco-muted">{office.contactName}</p>
                 <p className="mt-1">
