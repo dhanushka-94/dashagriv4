@@ -1,8 +1,12 @@
 import { site } from "@/lib/site";
 
 export function ContactLocations({ className = "" }: { className?: string }) {
+  const singleOffice = site.offices.length === 1;
+
   return (
-    <div className={`grid grid-cols-1 gap-6 sm:grid-cols-2 ${className}`}>
+    <div
+      className={`grid grid-cols-1 gap-6 ${singleOffice ? "mx-auto max-w-md" : "sm:grid-cols-2"} ${className}`}
+    >
       {site.offices.map((office) => (
         <address
           key={office.country}
@@ -13,7 +17,10 @@ export function ContactLocations({ className = "" }: { className?: string }) {
           <p className="mt-3 text-sm text-coco-muted">
             <span className="block">
               Mobile:{" "}
-              <a href={`tel:${office.mobileTel}`} className="font-medium text-coco-leaf hover:text-coco-husk-deep hover:underline">
+              <a
+                href={`tel:${office.mobileTel}`}
+                className="font-medium text-coco-leaf hover:text-coco-husk-deep hover:underline"
+              >
                 {office.mobile}
               </a>
             </span>

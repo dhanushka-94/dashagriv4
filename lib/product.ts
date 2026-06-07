@@ -35,7 +35,7 @@ export const PRODUCT: ProductData = {
   paragraphs: [
     "Our coco peat grow bag is an elongated plain white poly bag—113 cm long, 19 cm wide, and 10 cm gusset height—pre-packed with a professional-grade substrate blend from Sri Lanka. No third-party poly pack branding; only Dash Agri Coco.",
     "The medium combines 70% washed coco chips for structure and aeration with 30% low EC coco pith for moisture retention. EC is less than 1 mS/cm and pH is maintained between 5.5 and 6.5 for reliable germination and steady growth in home and greenhouse settings.",
-    "Ideal for coriander, mint, basil, lettuce, strawberries, chili, tomatoes, and more. We supply growers and distributors across Sri Lanka, the United States, and Canada.",
+    "Ideal for coriander, mint, basil, lettuce, strawberries, chili, tomatoes, and more. We supply growers and distributors across Sri Lanka and Canada.",
   ],
   highlights: [
     "113 cm × 19 cm × 10 cm elongated grow bag",

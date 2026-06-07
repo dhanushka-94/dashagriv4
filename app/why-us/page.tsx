@@ -12,7 +12,7 @@ import {
 export const metadata: Metadata = {
   title: "Why growers choose us",
   description:
-    "Organic cocopeat from Sri Lanka with excellent water retention, aeration, and supply across Sri Lanka, the USA, and Canada.",
+    "Organic cocopeat from Sri Lanka with excellent water retention, aeration, and supply across Sri Lanka and Canada.",
   alternates: { canonical: "/why-us" },
 };
 
@@ -35,7 +35,7 @@ const benefits = [
   {
     icon: PackageIcon,
     title: "Global reach",
-    text: "Sourced in Sri Lanka with dependable supply for customers across Sri Lanka, the USA, and Canada.",
+    text: "Sourced in Sri Lanka with dependable supply for customers across Sri Lanka and Canada.",
   },
 ];
 

@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact us",
   description:
-    "Contact DashAgri Coco in Canada and the USA for cocopeat quotes, specifications, and logistics.",
+    "Contact DashAgri Coco in Canada for cocopeat quotes, specifications, and logistics.",
   alternates: { canonical: "/contact" },
 };
 
@@ -20,7 +20,7 @@ export default function ContactPage() {
         <PageHeader
           eyebrow="Contact"
           title="Contact us"
-          description={`Reach our team in Canada and the USA for quotes, specifications, and logistics. We also serve ${site.regions.join(", ")}.`}
+          description={`Reach our team in Canada for quotes, specifications, and logistics. We serve ${site.regions.join(" and ")}.`}
           breadcrumb={[{ label: "Home", href: "/" }, { label: "Contact" }]}
         />
         <section className="py-14 sm:pb-20 md:pb-28">

@@ -16,7 +16,7 @@ export function absoluteUrl(path: string): string {
 }
 
 export const defaultDescription =
-  "Dash Agri Coco peat grow bags from Sri Lanka—70% washed coco chips, 30% low EC coco pith, low salinity, and supply across Sri Lanka, the USA, and Canada.";
+  "Dash Agri Coco peat grow bags from Sri Lanka—70% washed coco chips, 30% low EC coco pith, low salinity, and supply across Sri Lanka and Canada.";
 
 export const seoKeywords = [
   "coco peat grow bag",

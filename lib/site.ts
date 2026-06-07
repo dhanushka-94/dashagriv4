@@ -14,8 +14,8 @@ export type SiteConfig = {
   name: string;
   social: { facebook: string; youtube: string };
   developer: { name: string; website?: string };
-  regions: readonly ["Sri Lanka", "United States", "Canada"];
-  /** Regional offices (Canada, USA, etc.) */
+  regions: readonly ["Sri Lanka", "Canada"];
+  /** Regional offices */
   offices: OfficeContact[];
 };
 
@@ -28,7 +28,7 @@ export const site: SiteConfig = {
   developer: {
     name: "Olexto Digital Solutions (Pvt) Ltd",
   },
-  regions: ["Sri Lanka", "United States", "Canada"],
+  regions: ["Sri Lanka", "Canada"],
   offices: [
     {
       country: "Canada",
@@ -42,13 +42,6 @@ export const site: SiteConfig = {
         "Toronto, Ontario, M1X 0C1",
         "Canada",
       ],
-    },
-    {
-      country: "USA",
-      contactName: "Chaminda Dias",
-      mobile: "+1 (805) 791-0522",
-      mobileTel: "+18057910522",
-      addressLines: ["743 California Av", "Simi Valley, CA 93065", "USA"],
     },
   ],
 };

@@ -37,8 +37,8 @@ export function SiteFooter() {
               </a>
             </div>
           </div>
-          <div className="flex min-w-0 flex-wrap gap-8 text-sm sm:gap-10 lg:gap-12">
-            <div>
+          <div className="flex min-w-0 flex-col gap-8 text-sm sm:flex-row sm:flex-wrap sm:gap-10 lg:gap-12">
+            <div className="min-w-[10rem]">
               <p className="font-semibold text-foreground">Explore</p>
               <ul className="mt-2 space-y-2 text-coco-muted">
                 <li>
@@ -74,7 +74,7 @@ export function SiteFooter() {
               </ul>
             </div>
             {site.offices.map((office) => (
-              <div key={office.country} className="min-w-0 w-full max-w-[16rem] sm:w-auto">
+              <div key={office.country} className="min-w-0 w-full max-w-xs sm:w-auto">
                 <p className="font-semibold text-foreground">{office.country}</p>
                 <p className="mt-2 text-coco-muted">{office.contactName}</p>
                 <p className="mt-1">

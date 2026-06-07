@@ -61,7 +61,7 @@ export function QuoteContactProvider({ children }: { children: React.ReactNode }
                 <h2 id={titleId} className="mt-1 font-serif text-xl font-semibold text-coco-husk-deep sm:text-2xl">
                   Contact {site.name}
                 </h2>
-                <p className="mt-1 text-sm text-coco-muted">Reach our Canada and USA offices directly.</p>
+                <p className="mt-1 text-sm text-coco-muted">Reach our Canada office directly.</p>
               </div>
               <button
                 type="button"
@@ -77,7 +77,7 @@ export function QuoteContactProvider({ children }: { children: React.ReactNode }
             <div className="px-5 py-5 sm:px-6 sm:py-6">
               <ContactLocations />
               <p className="mt-5 text-center text-xs text-coco-muted">
-                Serving {site.regions.join(", ")}
+                Serving {site.regions.join(" and ")}
               </p>
             </div>
           </div>
