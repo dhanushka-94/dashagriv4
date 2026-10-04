@@ -89,31 +89,18 @@ export function SiteFooter() {
                     </a>
                   </p>
                 ) : null}
-                <p className="mt-2 text-xs leading-relaxed text-coco-muted">
-                  {office.addressLines.join(", ")}
-                </p>
+                {office.addressLines.length > 0 ? (
+                  <p className="mt-2 text-xs leading-relaxed text-coco-muted">
+                    {office.addressLines.join(", ")}
+                  </p>
+                ) : null}
               </div>
             ))}
           </div>
         </div>
 
-        <div className="mt-10 space-y-3 border-t border-coco-sand pt-8 text-center text-xs text-coco-muted">
+        <div className="mt-10 border-t border-coco-sand pt-8 text-center text-xs text-coco-muted">
           <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
-          <p>
-            Development:{" "}
-            {site.developer.website ? (
-              <a
-                href={site.developer.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-coco-husk underline-offset-2 hover:underline"
-              >
-                {site.developer.name}
-              </a>
-            ) : (
-              <span className="font-medium text-coco-husk">{site.developer.name}</span>
-            )}
-          </p>
         </div>
       </div>
     </footer>

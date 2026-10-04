@@ -9,7 +9,7 @@ import { ABOUT_IMAGE } from "@/lib/site-images";
 export const metadata: Metadata = {
   title: "About us",
   description:
-    "DashAgri Coco supplies premium organic cocopeat from Sri Lanka to growers in Sri Lanka and Canada.",
+    "DashAgri Coco supplies premium organic cocopeat from Sri Lanka to growers in Sri Lanka, Canada, and the USA.",
   alternates: { canonical: "/about" },
 };
 
@@ -41,7 +41,7 @@ export default function AboutPage() {
                   support commercial farms, greenhouses, distributors, and home gardeners.
                 </p>
                 <p>
-                  From sourcing in Sri Lanka to delivery in Canada, we prioritize consistent quality,
+                  From sourcing in Sri Lanka to delivery in Canada and the USA, we prioritize consistent quality,
                   sustainability, and performance in every batch.
                 </p>
               </div>

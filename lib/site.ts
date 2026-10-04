@@ -13,8 +13,7 @@ export type OfficeContact = {
 export type SiteConfig = {
   name: string;
   social: { facebook: string; youtube: string };
-  developer: { name: string; website?: string };
-  regions: readonly ["Sri Lanka", "Canada"];
+  regions: readonly ["Sri Lanka", "Canada", "USA"];
   /** Regional offices */
   offices: OfficeContact[];
 };
@@ -25,10 +24,7 @@ export const site: SiteConfig = {
     facebook: "https://www.facebook.com/",
     youtube: "https://www.youtube.com/",
   },
-  developer: {
-    name: "Olexto Digital Solutions (Pvt) Ltd",
-  },
-  regions: ["Sri Lanka", "Canada"],
+  regions: ["Sri Lanka", "Canada", "USA"],
   offices: [
     {
       country: "Canada",
@@ -42,6 +38,13 @@ export const site: SiteConfig = {
         "Toronto, Ontario, M1X 0C1",
         "Canada",
       ],
+    },
+    {
+      country: "USA",
+      contactName: "Dash Trading Inc",
+      mobile: "+1 805-791-0522",
+      mobileTel: "+18057910522",
+      addressLines: [],
     },
   ],
 };

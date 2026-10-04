@@ -36,13 +36,15 @@ export function ContactLocations({ className = "" }: { className?: string }) {
               </span>
             ) : null}
           </p>
-          <p className="mt-4 text-sm leading-relaxed text-coco-muted">
-            {office.addressLines.map((line) => (
-              <span key={line} className="block">
-                {line}
-              </span>
-            ))}
-          </p>
+          {office.addressLines.length > 0 ? (
+            <p className="mt-4 text-sm leading-relaxed text-coco-muted">
+              {office.addressLines.map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
+            </p>
+          ) : null}
         </address>
       ))}
     </div>
