@@ -16,31 +16,37 @@ export function absoluteUrl(path: string): string {
 }
 
 export const defaultDescription =
-  "Dash Agri Coco peat grow bags from Sri Lanka—70% washed coco chips, 30% low EC coco pith, low salinity, and supply across Sri Lanka, Canada, and the USA.";
+  "DashAgri supplies compressed coco coir grow bags—70% washed coco chips and 30% low-EC coco pith—for commercial greenhouse, nursery, and hydroponic growers.";
 
 export const seoKeywords = [
-  "coco peat grow bag",
-  "cocopeat grow bag",
-  "coconut coir grow bag",
-  "Sri Lanka cocopeat",
-  "low EC coco peat",
-  "balcony gardening",
-  "kitchen garden",
-  "Dash Agri Coco",
-  "DashAgri Coco",
-  "horticulture",
+  "coco coir grow bag",
+  "coco coir growing media",
+  "commercial greenhouse coco coir",
+  "hydroponic coco coir",
+  "low EC coco pith",
+  "buffered coco coir",
+  "DashAgri",
+  "Dash Trading Inc",
+  "wholesale coco coir",
 ] as const;
 
 export function organizationJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: site.name,
+    name: site.company,
+    brand: site.name,
     url: siteUrl,
     logo: absoluteUrl("/icon.svg"),
     description: defaultDescription,
-    sameAs: [site.social.facebook, site.social.youtube].filter(Boolean),
+    email: site.email,
     areaServed: [...site.regions],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Simi Valley",
+      addressRegion: "CA",
+      addressCountry: "US",
+    },
   };
 }
 
@@ -51,7 +57,7 @@ export function websiteJsonLd() {
     name: site.name,
     url: siteUrl,
     description: defaultDescription,
-    publisher: { "@type": "Organization", name: site.name, url: siteUrl },
+    publisher: { "@type": "Organization", name: site.company, url: siteUrl },
   };
 }
 
@@ -63,19 +69,14 @@ export function productJsonLd(product: ProductData, imageAbsoluteUrl: string) {
     description: product.shortDesc,
     image: [imageAbsoluteUrl, absoluteUrl(product.brochureSrc)],
     brand: { "@type": "Brand", name: site.name },
-    category: "Growing media — coco peat grow bag",
-    additionalProperty: [
-      ...product.specs.map((spec) => ({
+    category: "Growing media — coco coir grow bag",
+    additionalProperty: product.specs
+      .filter((spec) => !spec.pending)
+      .map((spec) => ({
         "@type": "PropertyValue",
         name: spec.label,
         value: spec.value,
       })),
-      ...product.highlights.map((text) => ({
-        "@type": "PropertyValue",
-        name: "Feature",
-        value: text,
-      })),
-    ],
   };
 }
 

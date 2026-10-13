@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Fraunces } from "next/font/google";
 import { BackToTop } from "@/components/back-to-top";
-import { QuoteContactProvider } from "@/components/quote-contact-provider";
 import { JsonLd } from "@/components/seo/json-ld";
 import {
   defaultDescription,
@@ -28,7 +27,7 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${site.name} | Coco peat grow bags from Sri Lanka`,
+    default: `${site.name} | Coco coir growing media for commercial growers`,
     template: `%s | ${site.name}`,
   },
   description: defaultDescription,
@@ -47,12 +46,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: site.name,
-    title: `${site.name} | Coco peat grow bags from Sri Lanka`,
+    title: `${site.name} | Coco coir growing media for commercial growers`,
     description: defaultDescription,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} | Coco peat grow bags from Sri Lanka`,
+    title: `${site.name} | Coco coir growing media for commercial growers`,
     description: defaultDescription,
   },
   category: "business",
@@ -74,10 +73,8 @@ export default function RootLayout({
       <body className="flex min-h-full min-w-0 flex-col antialiased">
         <JsonLd data={organizationJsonLd()} />
         <JsonLd data={websiteJsonLd()} />
-        <QuoteContactProvider>
-          {children}
-          <BackToTop />
-        </QuoteContactProvider>
+        {children}
+        <BackToTop />
       </body>
     </html>
   );

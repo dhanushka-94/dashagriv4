@@ -34,7 +34,7 @@ export default function ProductPage() {
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "Home", item: siteUrl },
-          { name: "Product", item: `${siteUrl}/product` },
+          { name: "Products", item: `${siteUrl}/product` },
         ])}
       />
       <SiteHeader />
@@ -43,7 +43,7 @@ export default function ProductPage() {
           eyebrow="Product"
           title={PRODUCT.title}
           description={PRODUCT.tagline}
-          breadcrumb={[{ label: "Home", href: "/" }, { label: "Product" }]}
+          breadcrumb={[{ label: "Home", href: "/" }, { label: "Products" }]}
         />
         <section className="py-14 sm:py-20">
           <div className="mx-auto w-full min-w-0 max-w-6xl px-4 sm:px-6">
@@ -76,7 +76,7 @@ export default function ProductPage() {
                   {PRODUCT.specs.map((spec) => (
                     <div
                       key={spec.label}
-                      className="grid grid-cols-1 gap-1 px-5 py-4 sm:grid-cols-[minmax(0,8.5rem)_1fr] sm:gap-4 sm:px-6"
+                      className="grid grid-cols-1 gap-1 px-5 py-4 md:grid-cols-[minmax(0,14rem)_1fr] md:gap-4 md:px-6"
                     >
                       <dt className="text-sm font-semibold uppercase tracking-wide text-coco-husk-deep">
                         {spec.label}
@@ -87,6 +87,7 @@ export default function ProductPage() {
                     </div>
                   ))}
                 </dl>
+                <p className="mt-4 text-sm leading-relaxed text-coco-muted">{PRODUCT.dimensionNote}</p>
               </div>
               <div className="min-w-0">
                 <p className="text-lg text-coco-muted">{PRODUCT.shortDesc}</p>
@@ -95,6 +96,9 @@ export default function ProductPage() {
                     <p key={i}>{p}</p>
                   ))}
                 </div>
+                <h3 className="mt-8 font-semibold text-foreground">Featured crops</h3>
+                <p className="mt-2 text-sm leading-relaxed text-coco-muted">{PRODUCT.crops.join(", ")}.</p>
+                <p className="mt-2 text-sm leading-relaxed text-coco-muted">{PRODUCT.cropNote}</p>
                 <ul className="mt-8 space-y-3">
                   {PRODUCT.highlights.map((line) => (
                     <li key={line} className="flex gap-3 text-coco-muted">
@@ -106,18 +110,33 @@ export default function ProductPage() {
               </div>
             </div>
 
+            <div className="mt-12 rounded-2xl border border-coco-sand bg-coco-cream/50 p-5 sm:p-6">
+              <h2 className="font-serif text-2xl font-semibold text-coco-husk-deep">Other coco coir products</h2>
+              <p className="mt-3 text-sm leading-relaxed text-coco-muted sm:text-base">
+                Additional coco coir formats, including blocks, briquettes, and bales, may be available upon
+                confirmation. They are not listed as stocked products until supply is confirmed. Contact the
+                team to discuss commercial growing-media requirements.
+              </p>
+            </div>
+
             <div className="mt-12 flex flex-col gap-3 border-t border-coco-sand pt-10 sm:flex-row sm:flex-wrap">
               <Link
-                href="/contact"
-                className="inline-flex min-h-12 items-center justify-center rounded-full bg-coco-husk px-8 text-base font-semibold text-white shadow-md transition hover:bg-coco-husk-deep"
+                href="/wholesale"
+                className="inline-flex min-h-12 w-full items-center justify-center rounded-full bg-coco-husk px-8 text-center text-base font-semibold text-white shadow-md transition hover:bg-coco-husk-deep sm:w-auto"
               >
-                Request a quote
+                Request a Bulk Quote
+              </Link>
+              <Link
+                href="/specifications"
+                className="inline-flex min-h-12 w-full items-center justify-center rounded-full border-2 border-coco-husk/25 px-8 text-center text-base font-semibold text-coco-husk transition hover:border-coco-husk/50 sm:w-auto"
+              >
+                Technical specifications
               </Link>
               <Link
                 href="/grow-bag-guide"
-                className="inline-flex min-h-12 items-center justify-center rounded-full border-2 border-coco-husk/25 px-8 text-base font-semibold text-coco-husk transition hover:border-coco-husk/50"
+                className="inline-flex min-h-12 w-full items-center justify-center rounded-full border-2 border-coco-husk/25 px-8 text-center text-base font-semibold text-coco-husk transition hover:border-coco-husk/50 sm:w-auto"
               >
-                How to use your grow bag
+                Growing guide
               </Link>
             </div>
           </div>

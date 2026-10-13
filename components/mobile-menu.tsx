@@ -20,7 +20,7 @@ export function MobileMenu() {
   }, [open]);
 
   return (
-    <div className="lg:hidden">
+    <div className="xl:hidden">
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
@@ -50,7 +50,7 @@ export function MobileMenu() {
           />
           <nav
             id="mobile-menu-panel"
-            className="fixed right-0 top-[4.25rem] z-[60] max-h-[calc(100dvh-4.25rem)] w-full max-w-sm overflow-y-auto border-b border-coco-sand bg-background px-4 pb-8 pt-4 shadow-xl sm:max-w-xs"
+            className="fixed inset-x-0 top-[4.25rem] z-[60] max-h-[calc(100dvh-4.25rem)] overflow-y-auto border-b border-coco-sand bg-background px-4 pb-8 pt-4 shadow-xl sm:inset-x-auto sm:right-0 sm:w-full sm:max-w-sm"
           >
             <ul className="flex flex-col gap-1">
               {navLinks.map((item) => (
@@ -69,7 +69,7 @@ export function MobileMenu() {
               className="mt-6 flex min-h-12 w-full items-center justify-center rounded-full bg-coco-husk px-6 text-base font-semibold text-white"
               onAfterClick={() => setOpen(false)}
             >
-              Get a quote
+              Request a Bulk Quote
             </QuoteButton>
           </nav>
         </>

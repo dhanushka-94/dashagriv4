@@ -14,7 +14,7 @@ export const PRODUCT_IMAGE = enc("product image.png");
 export const BROCHURE_IMAGE = enc("detaild image.png");
 
 export const PRODUCT_IMAGE_ALT =
-  "Dash Agri Coco peat grow bag — plain white poly, elongated format with herbs and vegetables growing from the substrate";
+  "DashAgri Coco Peat Grow Bag, a compressed pre-filled coco coir grow bag";
 
 export const BROCHURE_IMAGE_ALT =
-  "Dash Agri Coco peat grow bag brochure — dimensions, 70% washed coco chips and 30% low EC coco pith, growing guide highlights";
+  "DashAgri coco coir grow bag brochure showing dimensions and the 70% washed coco chips and 30% low-EC coco pith blend";

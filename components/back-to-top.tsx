@@ -21,7 +21,7 @@ export function BackToTop() {
     <button
       type="button"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className="fixed bottom-4 right-4 z-50 flex min-h-12 min-w-12 items-center justify-center rounded-full border border-coco-sand bg-white text-coco-husk shadow-lg transition hover:bg-coco-cream hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coco-leaf sm:bottom-6 sm:right-6"
+      className="fixed right-4 bottom-[max(1rem,env(safe-area-inset-bottom))] z-50 flex min-h-12 min-w-12 items-center justify-center rounded-full border border-coco-sand bg-white text-coco-husk shadow-lg transition hover:bg-coco-cream hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coco-leaf sm:right-6"
       aria-label="Back to top"
     >
       <svg

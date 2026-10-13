@@ -5,7 +5,7 @@ export function ContactLocations({ className = "" }: { className?: string }) {
 
   return (
     <div
-      className={`grid grid-cols-1 gap-6 ${singleOffice ? "mx-auto max-w-md" : "sm:grid-cols-2"} ${className}`}
+      className={`grid grid-cols-1 gap-6 ${singleOffice ? "mx-auto max-w-md" : "md:grid-cols-2"} ${className}`}
     >
       {site.offices.map((office) => (
         <address

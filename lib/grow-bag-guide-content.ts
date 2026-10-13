@@ -1,73 +1,68 @@
-/** Copy for the coco peat grow bag guide — edit here to update the public page. */
+/** Commercial grow-bag steps. Water volume, hole size, and hole count stay unpublished until the manufacturer confirms them. */
 
 export const growBagGuideMeta = {
-  title: "How to use a coco peat grow bag",
+  title: "How to use DashAgri grow bags",
   description:
-    "Step-by-step guide for Dash Agri Coco peat grow bags: hydration, drainage, recommended plants, planting, nutrients, watering, sunlight, and pro tips.",
+    "Seven-step guide for positioning, hydrating, draining, and planting with DashAgri compressed coco coir grow bags.",
 };
 
 export const guideIntro =
-  "Follow these steps for our pre-filled coco peat grow bag—plain white poly, Dash Agri Coco substrate, and an elongated format suited to patios, balconies, and small greenhouses.";
+  "Use these steps to prepare a DashAgri compressed coco coir grow bag. Follow the manufacturer’s recommended water volume and hydration time once those details are confirmed. Do not publish hole counts or hole sizes until they are confirmed for the bag and irrigation system.";
 
-export const howToUseTitle = "How to Use a Coco Peat Grow Bag";
+export const howToUseTitle = "How to Use DashAgri Grow Bags";
 
 export const howToUseSteps = [
   {
-    title: "Step 1 – Hydrate the Coco Peat",
+    title: "Position the grow bag",
     points: [
-      "Add water to the coco peat grow bag before planting.",
-      "Allow the coco peat to absorb water fully.",
+      "Place the compressed grow bag on a clean, level growing surface with adequate support and drainage.",
     ],
   },
   {
-    title: "Step 2 – Make Drainage Holes",
+    title: "Hydrate the growing medium",
     points: [
-      "Create several small holes at the bottom or sides for water drainage.",
+      "Gradually add clean water to expand the compressed coco coir.",
+      "Use the manufacturer’s recommended water volume and hydration time. Those amounts are pending confirmation and are not listed here.",
+    ],
+  },
+  {
+    title: "Allow the coco coir to expand",
+    points: [
+      "Allow the growing medium to hydrate evenly.",
+      "Check that the material is fully expanded before planting.",
+    ],
+  },
+  {
+    title: "Prepare drainage openings",
+    points: [
+      "Create drainage openings in the locations and sizes recommended for the bag and irrigation system.",
+      "Ensure excess water can drain without waterlogging the roots.",
+      "Hole size and count are pending manufacturer confirmation.",
+    ],
+  },
+  {
+    title: "Prepare planting openings",
+    points: [
+      "Make suitable planting openings on top of the grow bag according to the crop and recommended plant spacing.",
+    ],
+  },
+  {
+    title: "Add nutrients and plant",
+    points: [
+      "Prepare the appropriate nutrient solution for your crop.",
+      "Coco coir generally requires a suitable fertilization program because it is not a complete nutrient source by itself.",
+      "Transplant seedlings into the prepared growing medium.",
+    ],
+  },
+  {
+    title: "Maintain irrigation and monitor growth",
+    points: [
+      "Water and feed according to crop requirements.",
+      "Monitor growing-media moisture, nutrient-solution EC, pH, and drainage.",
+      "Adjust irrigation and nutrition as plants develop.",
     ],
   },
 ] as const;
 
-export const recommendedPlantsTitle = "Recommended Plants";
-
-export const recommendedPlants = [
-  { level: "Easy", plants: ["Coriander", "Mint", "Basil", "Lettuce"] },
-  { level: "Medium", plants: ["Strawberries"] },
-  { level: "Advanced", plants: ["Chili", "Tomatoes"] },
-] as const;
-
-export const plantingInstructions = {
-  title: "Planting Instructions",
-  points: [
-    "Make a small hole.",
-    "Place seeds or seedlings.",
-    "Cover roots lightly.",
-    "Recommended: 1 plant per hole.",
-  ],
-} as const;
-
-export const nutrientStep = {
-  title: "Step 4 – Add Nutrients",
-  points: ["Add liquid fertilizer or nutrients after planting."],
-} as const;
-
-export const wateringGuide = {
-  title: "Watering Guide",
-  points: ["Keep moist.", "Do NOT flood with water."],
-} as const;
-
-export const sunlightRequirement = {
-  title: "Sunlight Requirement",
-  value: "4–6 hours sunlight daily",
-} as const;
-
-export const proTips = [
-  "Support tall plants with sticks.",
-  "Raise bag for better drainage.",
-  "Rotate for even sunlight.",
-  "Great for balconies and patios.",
-] as const;
-
-export const closingMessage = {
-  heading: "Happy Gardening",
-  quote: "Grow Fresh, Eat Healthy!",
-} as const;
+export const guideConfirmationNote =
+  "Water volume, hydration time, drainage-hole size and count, and planting-hole arrangement still need manufacturer confirmation before they can be published. Photos or an illustrated sequence can be added when they are available.";

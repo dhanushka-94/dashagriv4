@@ -1,4 +1,4 @@
-/** Update social URLs when your profiles are live. */
+/** Social profile URLs are omitted until live profiles are confirmed. */
 export type OfficeContact = {
   country: string;
   contactName: string;
@@ -12,20 +12,30 @@ export type OfficeContact = {
 
 export type SiteConfig = {
   name: string;
-  social: { facebook: string; youtube: string };
-  regions: readonly ["Sri Lanka", "Canada", "USA"];
-  /** Regional offices */
+  company: string;
+  location: string;
+  websiteLabel: string;
+  email: string;
+  regions: readonly ["Canada", "USA"];
+  /** Regional offices with verified phone numbers already published on the site */
   offices: OfficeContact[];
 };
 
 export const site: SiteConfig = {
-  name: "DashAgri Coco",
-  social: {
-    facebook: "https://www.facebook.com/",
-    youtube: "https://www.youtube.com/",
-  },
-  regions: ["Sri Lanka", "Canada", "USA"],
+  name: "DashAgri",
+  company: "Dash Trading Inc.",
+  location: "Simi Valley, California, USA",
+  websiteLabel: "www.dashagri.com",
+  email: "hello@dashagricoco.com",
+  regions: ["Canada", "USA"],
   offices: [
+    {
+      country: "USA",
+      contactName: "Dash Trading Inc",
+      mobile: "+1 805-791-0522",
+      mobileTel: "+18057910522",
+      addressLines: ["Simi Valley, California", "USA"],
+    },
     {
       country: "Canada",
       contactName: "Ruwan Jayakody",
@@ -38,13 +48,6 @@ export const site: SiteConfig = {
         "Toronto, Ontario, M1X 0C1",
         "Canada",
       ],
-    },
-    {
-      country: "USA",
-      contactName: "Dash Trading Inc",
-      mobile: "+1 805-791-0522",
-      mobileTel: "+18057910522",
-      addressLines: [],
     },
   ],
 };

@@ -11,7 +11,7 @@ import { getProductImage } from "@/lib/product";
 const productImage = getProductImage();
 
 export const metadata: Metadata = {
-  title: `${PRODUCT.title} from Sri Lanka`,
+  title: "Coco coir growing media for commercial growers",
   description: PRODUCT.shortDesc,
   alternates: { canonical: "/" },
   openGraph: {
