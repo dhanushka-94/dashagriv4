@@ -26,7 +26,7 @@ export const site: SiteConfig = {
   company: "Dash Trading Inc.",
   location: "Simi Valley, California, USA",
   websiteLabel: "www.dashagri.com",
-  email: "hello@dashagricoco.com",
+  email: "Dashtrading.chaminda@gmail.com",
   regions: ["Canada", "USA"],
   offices: [
     {
